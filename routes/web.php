@@ -2,6 +2,19 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('/admin/dashboard', function () {
+    return "Home Admin";
+});
+
+Route::get('/admin/finaceiro', function () {
+    return "Home Financeiro";
+});
+
+Route::get('/admin/produtos', function () {
+    return "Home Produtos";
+});
+
+
 Route::get('redirect3', function () {
     return redirect()->route('url.name');
 });
