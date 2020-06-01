@@ -2,17 +2,21 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('/login', function () {
+    return 'login';
+})->name('login');
+
 Route::get('/admin/dashboard', function () {
     return "Home Admin";
-});
+})->middleware('auth');
 
 Route::get('/admin/finaceiro', function () {
     return "Home Financeiro";
-});
+})->middleware('auth');
 
 Route::get('/admin/produtos', function () {
     return "Home Produtos";
-});
+})->middleware('auth');
 
 
 Route::get('redirect3', function () {
